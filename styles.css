@@ -1,0 +1,27 @@
+* {
+    margin: 0px;padding: 0px;
+}
+/*Top Bar*/
+.topPanel{
+    background-color: rgb(3, 3, 71);
+    height: 40px;width: 100%;
+    position: relative;
+}
+.topPanelButtons img{
+    height: 30px;width: 30px;margin: 5px;
+    position: absolute;
+}
+.topPanelButtons img#homeButton{
+    left: 0px;
+}
+.topPanelButtons img#featuresButton{
+    right: 0px;
+}
+/*Main Descriptive Body*/
+.desBody{
+    background-color: black;color: bisque;
+    position: absolute;
+    top: 40px;right: 0px;left: 0px;bottom: 0px;
+    text-align: center;
+    vertical-align: middle;
+}
