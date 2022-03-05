@@ -1,3 +1,4 @@
+<script>
 /*
     "use strict"; //catch coding mistakes
     Variable types are: undefined, null, boolean,
@@ -18,6 +19,10 @@
     concatnate string: + or +=
     len: .length 
     get exact letter: string[0]
+
+    Template literal: ``
+    `Hello, my name is ${myinfo.name}!`;
+
     
     ARRAYS:
     var arrayvar = ["abc",1];
@@ -29,7 +34,8 @@
     removedvariable = nestedarray.pop(); //deletes last value from arrya and returns it 
     removedvariable = nestedarray.shift(); //deletes first value from arrya and returns it 
     Change array to string: JSON.stringify(nestedarray)
-    
+    Copy of array: arr2 = [...arr1]; //spread operator
+
     FUNCTIONS:
     function functionname(variable1,variable2){
         result = variable1 + variable2;
@@ -37,17 +43,35 @@
     }
     functionname(1,2); //returns 3
 
+    Default Parameters (optional parameter):
+    const increment = (function (){
+        return function increment(number, value = 1){
+            return number + value;
+        };
+    })();
+
+    Variable number of arguments: ... rest opereator
+    const sum = (function(){
+        return function sum(...args){
+            return args.reduce((a,b)=>a+b,0)
+        };
+    })();
+
     Anonymous Functions:
     var aVariable = function(){
         return new Date();
-    }
-
-    2:54
-    
+    }    
     const aVariable = () => new Date(); //Arrow functions
     var aconcatnededarrays = (a,b) => a.concat(b);
     
-
+    Import/Require:
+    export const somefunction = a => a + 20;//from somefile.js
+    export {somefunction}; //alternateway
+    export const foo = "bar";
+    import {somefunction} from "./somefile.js";
+    import * as anobjecttoimporteverything from "./somefile.js";
+    export default function subtract(x,y) {return x - y;}
+    import subtract from "somefile";//default import
 
     Logic:
     == != converts to same type
@@ -93,8 +117,27 @@
         "body": {
             "head": 1,
             "hands": 2
+        setlimbs(newlimbno){ //call using myinfo.setlimbs(3);
+            this.limbs = newlimb;
         }    
     }; 
+
+    CLASS for constructor function:
+    class SpaceShuttle{
+        constructor(targetPlanetPassed){
+            this.targetPlanet = targetPlanetPassed;
+        }
+        get targetPlanet(){
+            return this.targetplanet;
+        }
+        set targetPlanet(updatedTargetPlanetPassed){
+            this.targetPlanet = updatedTargetPlanetPassed;
+        }
+    }
+    var zeus = new SpaceShuttle('Jupiter')
+    let planet = zeus.targetPlanet
+    zeus.targetPlanet = "Earth"
+    console.log(planet) //returns earth
 
     var accessobjectproperty = myinfo.name; 
     var accessobjectpropertyifspace = myinfo["favourite Foods"];
@@ -105,6 +148,22 @@
     var acessnestedproperty = myinfo.body.head; //or myinfo["body"]["head"]
     var myinfocopy = JSON.parse(JSON.stringify(myinfo)); //make a copy of object
     Object.freeze(myinfo) //make readonly
+
+    Destructuring:
+    const {name:a,limbs:b} = myinfo;
+    const {body: {head : c}} = myinfo;
+    const [a,b,,c] = [1,2,3,4,5];
+    const [,,...arr] = array // removes 1st 2 elements saves in arr
+    
+    //Take info from api
+    const passobjectprop =(function(){
+        return function passobjectproperty({name,limbs}){
+            return (name + limbs)
+        };
+    })();
+
+    //create obj from function
+    const creaatePerson = (name,age,gender) => ({name,age,gender});
 
     LOOPS:
     var i = 0
@@ -142,3 +201,4 @@
     }
     
     */
+</script>
