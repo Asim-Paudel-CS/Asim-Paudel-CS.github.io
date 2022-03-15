@@ -1,5 +1,3 @@
-<script>
-/*
     "use strict"; //catch coding mistakes
     Variable types are: undefined, null, boolean,
     string, symbol, number, and object (variables are case sensitive)
@@ -199,6 +197,3 @@
     } catch(ex) {
         //run backup code
     }
-    
-    */
-</script>
