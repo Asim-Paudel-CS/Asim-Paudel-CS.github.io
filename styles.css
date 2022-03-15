@@ -17,6 +17,13 @@
 .topPanelButtons img#featuresButton{
     right: 0px;
 }
+.topPanelButtons img#homeButton:hover{
+    transform: scale(1.1)
+}
+.topPanelButtons img#featuresButton:hover{
+    transform: scale(1.1)
+}
+
 /*Main Descriptive Body*/
 .desBody{
     overflow: hidden;
@@ -31,10 +38,15 @@
     display: flex; flex-direction: column; justify-content: center;/* align-items: right; gap: var(--gap, 40px);*/
 }
 .leftButtons{
+    margin-left: 0px;
     list-style: none;
 }
 .leftButtons > li{
     line-height: 6;
+}
+.leftButtons > li:hover{
+    cursor: grab;
+    font-weight: bold;
 }
 /*Right Body*/
 #rightItems{
