@@ -33,29 +33,35 @@
 }
 /*Left Body*/
 #leftItems{
-    position: absolute; inset: 0; width:  160px; margin-left: 20px;
+    position: absolute; inset: 0; width:  400px; margin-left: 0px;
     z-index: 20;
+    font-size: 30px;
     color: aliceblue; 
 }
 .leftButtons{
-    display: none;
-}
-/*
-.leftButtons > li{
+    text-align: right;
+    padding: 20px;
     margin-top: 30px;
-    padding-top: 20px;
+    background: hsl(0, 0%, 100%,0.1);
+    backdrop-filter: blur(0.1em);
+    position: relative;
+    top: 40px;
+    /* display: none; */
+    /* animation: slidein 6s; */
+    /* transform: translate(0px,40px) scale(1.0); */
 }
-.leftButtons > li:hover{
+.leftButtons:hover{
     cursor: grab;
-    font-weight: bold;
-} */
+    color: rgb(13, 19, 110);
+    backdrop-filter: blur(3em);
+    /* font-weight: bold; */
+}
 /*Right Body*/
 #rightItems{
     position: absolute; inset: 0; left: 0px;
     margin: 30px; margin-top: 0px; margin-right: 0px;/*border: 4px solid black; */
     background: hsl(0, 0%, 100%,0.1);
     backdrop-filter: blur(1em);
-    /*transform: skew(0deg,4deg) scale(0.8);*/
 }
 .mapsImg{
     border: 1px solid black;
@@ -68,15 +74,16 @@
 }
 @keyframes slidein {
     0%{
-        transform: translate(0,0);
-        -webkit-filter : blur(5px);
+        transform: scale(1.0);
     }
-    30%{
-        transform: translate(-12px,12px);
-        -webkit-filter : blur(5px);
-    }      
+    20%{
+        transform: scale(1.5);
+    } 
+    93%{
+        transform: scale(1.5);
+    }         
     100%{
-        transform: translate(-12px,12px);
+        transform: scale(1.0);
     }
 }
 @keyframes popin {
