@@ -117,4 +117,41 @@
         display: none;
     }
 }
+/* GameTab Exclusive*/
 
+body{
+    background-color: rgb(134, 62, 62);
+}
+/* .gameViewport{
+    overflow: hidden;
+    width: 1200px; height: 600px;
+    margin: 10px; margin-inline: auto;
+    background-image: url("/Images/BlackBG.jpg");
+} */
+/* #newGameBtn{
+    z-index: 20;
+    margin-top: 260px;
+    margin-inline: auto;
+    padding-block: 20px;
+    width: 200px;
+    height: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: brown;
+    background-color: aquamarine;
+}
+
+#newGameBtn:hover{
+    font-size: larger;
+} */
+
+@keyframes shiftUp {
+    0%{
+        transform: translate(0px,0px);
+        animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out;
+    }   
+    100%{
+        transform: translate(0px,-350px);
+    }
+}
